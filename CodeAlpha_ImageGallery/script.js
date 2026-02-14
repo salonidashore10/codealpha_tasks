@@ -4,6 +4,7 @@
 ========================= */
 const cards = Array.from(document.querySelectorAll(".card"));
 const filterButtons = document.querySelectorAll(".filters button");
+const downloadBtn = document.getElementById("downloadBtn");
 
 const searchInput = document.getElementById("searchinput");
 const clearIcon = document.querySelector(".clearicon");
@@ -126,4 +127,16 @@ document.addEventListener("keydown", e => {
 ========================= */
 function updateVisibleCards() {
   visibleCards = cards.filter(card => !card.classList.contains("hidden"));
+}
+
+function openLightbox() {
+  if (!visibleCards.length) return;
+
+  const imgSrc = visibleCards[currentIndex].querySelector("img").src;
+  lightboxImg.src = imgSrc;
+
+  // SET DOWNLOAD LINK
+  downloadBtn.href = imgSrc;
+
+  lightbox.classList.add("active");
 }
