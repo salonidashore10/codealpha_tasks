@@ -339,3 +339,26 @@ button:hover{
     margin: auto;
   }
 }
+
+.download-btn {
+  position: absolute;
+  top: 2rem;
+  left: 7rem;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(3, 106, 106, 0.9);
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
+  border-color: #020617;
+  border-style: solid;
+  box-shadow: 0px 0px 10px white;
+}
+
+.download-btn:hover {
+  color: #020617;
+  background: rgba(0, 255, 255, 1);
+  transform: scale(1.05);
+}
